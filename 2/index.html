@@ -3,7 +3,7 @@
 Todas las imágenes deben estar desaturada (en blanco y negro)
 ver: https://stackoverflow.com/questions/22994810/how-do-i-desaturate-and-saturate-an-image-using-css
 
-Al hacer click sobre la imágen esta debe recuperar su color con una transición
+Al hacer click sobre la imagen esta debe recuperar su color con una transición
 de un segundo, al volver hacer click debe volver a estar en blanco y negro.
 -->
 
@@ -12,8 +12,67 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
   <head>
     <meta charset="utf-8">
     <title></title>
+        <style>
+    	.imagenes {
+    		width: 33%;
+    		display: inline-block;
+    	}
+    	.imagenes img {
+		    filter: url(~"data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+		    -webkit-filter: grayscale(100%);
+		    -moz-filter:    grayscale(100%);
+		    -ms-filter:     grayscale(100%);
+		    -o-filter:      grayscale(100%);
+		    filter: gray; 
+		    transition: 1s;
+		}
+
+		.imagenes-hover img {
+		    filter: none;
+		    cursor: pointer;
+		}
+
+    </style>
   </head>
   <body>
-
+  	<div class="imagenes">
+  		<img src="img/1.jpg" alt="">
+  	</div>
+  	<div class="imagenes">
+  		<img src="img/2.jpg" alt="">
+  	</div>
+  	<div class="imagenes">
+  		<img src="img/3.jpg" alt="">
+  	</div>  	
+  	<div class="imagenes">
+  		<img src="img/4.jpg" alt="">
+  	</div>  	
+  	<div class="imagenes">
+  		<img src="img/5.jpg" alt="">
+  	</div>  	
+  	<div class="imagenes">
+  		<img src="img/6.jpg" alt="">
+  	</div>  	
+  	<div class="imagenes">
+  		<img src="img/7.jpg" alt="">
+  	</div>  	
+  	<div class="imagenes">
+  		<img src="img/8.jpg" alt="">
+  	</div>  	
+  	<div class="imagenes">
+  		<img src="img/9.jpg" alt="">
+  	</div>
+  	<div class="imagenes">
+  		<img src="img/9.jpg" alt="">
+  	</div>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script>
+      $(".imagenes").on('click', function(){
+        $(this).toggleClass("imagenes-hover");
+      })
+   
+  
+  </script>
+
 </html>

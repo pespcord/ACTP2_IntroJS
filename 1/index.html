@@ -10,8 +10,59 @@ Tip: Investigar el evento window.onload
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+    	.imagenes {
+    		width: 33%;
+    		display: inline-block;
+    	}
+    </style>
   </head>
   <body>
+  	<div class="imagenes">
+  		<img src="img/1.jpg" alt="">
+  	</div>
+  	<div class="imagenes">
+  		<img src="img/2.jpg" alt="">
+  	</div>
+  	<div class="imagenes">
+  		<img src="img/3.jpg" alt="">
+  	</div>  	
+  	<div class="imagenes">
+  		<img src="img/4.jpg" alt="">
+  	</div>  	
+  	<div class="imagenes">
+  		<img src="img/5.jpg" alt="">
+  	</div>  	
+  	<div class="imagenes">
+  		<img src="img/6.jpg" alt="">
+  	</div>  	
+  	<div class="imagenes">
+  		<img src="img/7.jpg" alt="">
+  	</div>  	
+  	<div class="imagenes">
+  		<img src="img/8.jpg" alt="">
+  	</div>  	
+  	<div class="imagenes">
+  		<img src="img/9.jpg" alt="">
+  	</div>
+  	<div class="imagenes">
+  		<img src="img/9.jpg" alt="">
+  	</div>
+
 
   </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script>
+  	$( window ).on('load', function() { 
+  		alert("Cargando el DOM")
+	});
+	
+   $(function() {
+  		alert("Listo DOM")
+    // $( "img" ).ready(function() { alert("Listo img")});
+  });
+   
+  
+  </script>
 </html>
